@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../../css/main.css"> -->
+
+    <link rel="stylesheet" href="../css/people.css">
+    <title>people</title>
+</head>
+
+<body>
+    <div class="topnav">
+        <div class="menu-hamburger">
+            <div class="pr-10" onclick="openNav()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16">
+                    <defs>
+                        <style>
+                            .a {
+                                fill: #fff;
+                            }
+                        </style>
+                    </defs>
+                    <path class="a" d="M4.5,25h24V22.333H4.5Zm0-6.667h24V15.667H4.5ZM4.5,9v2.667h24V9Z"
+                        transform="translate(-4.5 -9)" />
+                </svg>
+            </div>
+            <div>
+                MGM Studio
+            </div>
+        </div>
+        <div class="nav-actions-container">
+            <div class="notifications-action pr-10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20">
+                    <defs>
+                        <style>
+                            .a {
+                                fill: #fff;
+                            }
+                        </style>
+                    </defs>
+                    <path class="a"
+                        d="M18.875,28.336a.671.671,0,0,0-.658.528,1.3,1.3,0,0,1-.259.564.979.979,0,0,1-.834.305,1,1,0,0,1-.834-.305,1.3,1.3,0,0,1-.259-.564.671.671,0,0,0-.658-.528h0a.675.675,0,0,0-.658.823,2.313,2.313,0,0,0,2.408,1.921,2.309,2.309,0,0,0,2.408-1.921.678.678,0,0,0-.658-.823Z"
+                        transform="translate(-9.139 -11.08)" />
+                    <path class="a"
+                        d="M22.574,18.625c-.771-1.007-2.287-1.6-2.287-6.105,0-4.627-2.062-6.487-3.984-6.933-.18-.045-.31-.1-.31-.293V5.151a1.222,1.222,0,0,0-1.2-1.22h-.03a1.222,1.222,0,0,0-1.2,1.22v.144c0,.184-.13.248-.31.293-1.927.451-3.984,2.306-3.984,6.933,0,4.508-1.517,5.093-2.287,6.105a.984.984,0,0,0,.8,1.577h14.02A.984.984,0,0,0,22.574,18.625Zm-1.952.288H8.95a.217.217,0,0,1-.165-.362,6,6,0,0,0,1.051-1.656,11.147,11.147,0,0,0,.716-4.374,7.551,7.551,0,0,1,1.046-4.3,3.212,3.212,0,0,1,1.937-1.369,1.758,1.758,0,0,0,.931-.521.4.4,0,0,1,.6-.01A1.818,1.818,0,0,0,16,6.847a3.212,3.212,0,0,1,1.937,1.369,7.551,7.551,0,0,1,1.046,4.3,11.147,11.147,0,0,0,.716,4.374,6.071,6.071,0,0,0,1.076,1.681A.2.2,0,0,1,20.622,18.913Z"
+                        transform="translate(-6.775 -3.93)" />
+                </svg>
+            </div>
+            <div class="avatar-action pl-10">
+                <div class="profile-picture">
+                    <img src="../assets/media/profile.svg" />
+                </div>
+                <div class="pl-10">
+                    <span>Adam Zampa</span>
+                    <span>
+                        <img src="../assets/media/down-arrow.svg" />
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <div class="sidenav-body">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <div class="sidenav-logo">
+                <picture>
+                    <!-- <source media="(min-width:650px)" src="../assets/media/logo.png" /> -->
+                    <img src="../assets/media/logo2x.png" />
+                </picture>
+            </div>
+            <div class="sidenav-links">
+                <div class="sidenav-link active-link">
+                    people
+                </div>
+                <div class="sidenav-link">
+                    New Incoming Submission
+                </div>
+                <div class="sidenav-link">
+                    Projects
+                    <div class="sidenav-sublink">
+                        <ul>
+                            <li>Current Projects</li>
+                            <li>Development Projects</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sidenav-link">
+                    People Module
+                    <div class="sidenav-sublink">
+                        <ul>
+                            <li>People Management</li>
+                            <li>Company Management</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sidenav-link">
+                    Reports
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="people-container">
+        <section>
+            <div class="people-title">
+                <div class="people-welcome-title">People Management</div>
+                <div class="incoming-submission-btn">
+                    <!-- <button>NEW INCOMING SUBMISSION</button> -->
+                   
+                    <a href="../people/new-people-contact.html" > <span class="iconPlus">
+                        <img src="../assets/media/iconAdd.svg" />
+                    </span> Add New Contacts</a>
+                </div>
+            </div>
+        </section>
+        <section class="people-section">
+            <div class="table-container">
+                <div class="table-title">
+                    <div>
+                        All Contacts
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Search" class="table-search">
+                    </div>
+                </div>
+                <table class="submission-table">
+                    <tr class="submission-table-tr">
+                        <th>Profile Picture <img onclick="myFunction(event)" class="filter-icon"/>
+                            <hr class="rowHrStyle"> </th>
+                        <th>Contact Name<img onclick="myFunction(event)" class="filter-icon"
+                                src="../assets/media/filter.svg" />   <hr class="rowHrStyle"> </th>
+                        <th>Company Name <img onclick="myFunction(event)" class="filter-icon"
+                                src="../assets/media/filter.svg" />  <hr class="rowHrStyle"> </th>
+                        <th>Title<img onclick="myFunction(event)" class="filter-icon"
+                                src="../assets/media/filter.svg" />  <hr class="rowHrStyle"> </th>
+                        <th>Related Contact&nbsp; <img onclick="myFunction(event)" class="filter-icon"
+                                src="../assets/media/filter.svg" />  <hr class="rowHrStyle"> </th>
+                        <th>Deal <img onclick="myFunction(event)" class="filter-icon"
+                                src="../assets/media/filter.svg" />  <hr class="rowHrStyle"></th>
+                        <th>Last Contacted <img onclick="myFunction(event)" class="filter-icon"
+                                src="../assets/media/filter.svg" />  <hr class="rowHrStyle"></th>
+                                <th>Next Follow Up <img onclick="myFunction(event)" class="filter-icon"
+                                    src="../assets/media/filter.svg" /> </th>
+                    </tr>
+                    <tr onclick="redirect()">
+                        <td>
+                            <div class="profile-picture picture-row">
+                                <img src="../assets/media/profile.svg" />
+                           </div></td>
+                        <td>Bootsie's War</td>
+                        <td>None</td>
+                        <td>Writer to know</td>
+                        <td>Eric Henmen
+                            <div class="tooltip">+1 more
+                                <span class="tooltiptext">Jeena Johnshon</span>
+                              </div>
+                        </td>
+                          <td>None</td>
+                        <td>05/06/2020</td>
+                        <td>05/06/2020</td>
+                    </tr>
+                    <tr onclick="redirect()">
+                        <td>
+                            <div class="profile-picture picture-row">
+                                <img src="../assets/media/profile.svg" />
+                           </div></td>
+                        <td>Somewhere I Belong - S3</td>
+                        <td>OVERALL</td>
+                        <td>Sample</td>
+                        <td>Jason Joseph</td>
+                        <td>None</td>
+                        <td>05/06/2020</td>
+                        <td>05/06/2020</td>
+                    </tr>
+                    <tr onclick="redirect()">
+                        <td>
+                            <div class="profile-picture picture-row">
+                                <img src="../assets/media/profile.svg" />
+                           </div></td>
+                        <td>The Handmaid's Tale</td>
+                        <td>None</td>
+                        <td>Current Project Staffing</td>
+                        <td>Sophie Guerrero</td>
+                       <td>None</td>
+                        <td>05/06/2020</td>
+                        <td>05/06/2020</td>
+                    </tr>
+                    <tr onclick="redirect()">
+                        <td>
+                            <div class="profile-picture picture-row">
+                                <img src="../assets/media/profile.svg" />
+                           </div></td>
+                        <td>Lauren Lake's Paternity Court</td>
+                        <td>None</td>
+                        <td>Writer to Know</td>
+                        <td>Alfred Padilla</td>
+                        <td>OverAll</td>
+                        <td>05/06/2020</td>
+                        <td>05/06/2020</td>
+                    </tr>
+                    <tr onclick="redirect()">
+                        <td>
+                            <div class="profile-picture picture-row">
+                                <img src="../assets/media/profile.svg" />
+                           </div></td>
+                        <td>How the West has Won</td>
+                        <td>None</td>
+                        <td>Writer to Know</td>
+                        <td>Cecilia Matthews</td>
+                       <td>None</td>
+                        <td>05/06/2020</td>
+                        <td>05/06/2020</td>
+                    </tr>
+                    <tr onclick="redirect()">
+                        <td>
+                            <div class="profile-picture picture-row">
+                                <img src="../assets/media/profile.svg" />
+                           </div></td>
+                        <td>Nightmare Cafe</td>
+                        <td>OVERALL</td>
+                        <td>Writer to Know</td>
+                        <td>Leon Norton</td>
+                        <td>OverAll</td>
+                        <td>05/06/2020</td>
+                        <td>05/06/2020</td>
+                    </tr>
+                    <tr onclick="redirect()">
+                        <td>
+                            <div class="profile-picture picture-row">
+                                <img src="../assets/media/profile.svg" />
+                           </div></td>
+                        <td>Sindbad Jr. and his Magic Belt</td>
+                        <td>OVERALL</td>
+                        <td>Available Material</td>
+                        <td>Ethel Fields</td>
+                        <td>OverAll</td>
+                        <td>05/06/2020</td>
+                        <td>05/06/2020</td>
+                    </tr>
+                    <tr onclick="redirect()">
+                        <td>
+                            <div class="profile-picture picture-row">
+                                <img src="../assets/media/profile.svg" />
+                           </div></td>
+                        <td>Sindbad Jr. and his Magic Belt</td>
+                        <td>OVERALL</td>
+                        <td>Available Material</td>
+                        <td>Ethel Fields</td>
+                        <td>OverAll</td>
+                        <td>05/06/2020</td>
+                        <td>05/06/2020</td>
+                    </tr>
+                    <tr onclick="redirect()">
+                        <td>
+                            <div class="profile-picture picture-row">
+                                <img src="../assets/media/profile.svg" />
+                           </div></td>
+                        <td>Sindbad Jr. and his Magic Belt</td>
+                        <td>OVERALL</td>
+                        <td>Available Material</td>
+                        <td>Ethel Fields</td>
+                        <td>OverAll</td>
+                        <td>05/06/2020</td>
+                        <td>05/06/2020</td>
+                    </tr>
+                    <tr onclick="redirect()">
+                        <td>
+
+                            <div class="profile-picture picture-row">
+                                <img src="../assets/media/profile.svg" />
+                           </div></td>
+                        <td>Beyond Westworld</td>
+                        <td>None</td>
+                        <td>Available Material</td>
+                        <td>Connor Brooks</td>
+                        <td>OverAll</td>
+                        <td>05/06/2020</td>
+                        <td>05/06/2020</td>
+                    </tr>
+                    
+                </table>
+                <div class="table-options">
+                    Rows per page:
+                    <select name="rows">
+                        <option selected value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                    </select>
+                    <span class="pagination-list">1-10 of 5</span>
+                    <span class="pagination">
+                        <img src="../assets/media/last.svg" />
+                        <img src="../assets/media/prev.svg" style="transform: rotate(180deg)" />
+                        <img src="../assets/media/next.svg" />
+                        <img src="../assets/media/start.svg" />
+                    </span>
+                </div>
+            </div>
+        </section>
+        <div id="searchPopup" class="hide-popup popup-search">
+
+            <div class="popup-search-input">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closePopup()">&times;</a>
+                </div>
+                <div>
+                    <label for="filter-search" class="form-control-ac-label">
+                        Search
+                    </label>
+                    <input type="text" id="filter-search" class="table-search">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function redirect(){
+            window.location.href = "people-contact-page.html";
+        }
+        const scrollToItems = function () {
+            const elmnt = document.getElementById("actionable-items-scrollto");
+            elmnt.scrollIntoView();
+        };
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        function myFunction(event) {
+            console.log(event);
+            let x = event.pageX;
+            let y = event.pageY;
+            document.getElementById("searchPopup").style.position = "absolute";
+            document.getElementById("searchPopup").style.left = (x - 50) + "px";
+            document.getElementById("searchPopup").style.top = (y - 100) + "px";
+            document.getElementById("searchPopup").classList.remove("hide-popup");
+        }
+
+        function closePopup() {
+            document.getElementById("searchPopup").classList.add("hide-popup");
+        }
+    </script>
+</body>
+
+</html>

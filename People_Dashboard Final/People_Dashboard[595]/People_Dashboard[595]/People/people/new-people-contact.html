@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/new-people-contact/new-people-contact.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="topnav">
+        <div class="menu-hamburger">
+            <div class="pr-10" onclick="openNav()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16">
+                    <defs>
+                        <style>
+                            .a {
+                                fill: #fff;
+                            }
+                        </style>
+                    </defs>
+                    <path class="a" d="M4.5,25h24V22.333H4.5Zm0-6.667h24V15.667H4.5ZM4.5,9v2.667h24V9Z"
+                        transform="translate(-4.5 -9)" />
+                </svg>
+            </div>
+            <div>
+                MGM Studio
+            </div>
+        </div>
+        <div class="nav-actions-container">
+            <div class="notifications-action pr-10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20">
+                    <defs>
+                        <style>
+                            .a {
+                                fill: #fff;
+                            }
+                        </style>
+                    </defs>
+                    <path class="a"
+                        d="M18.875,28.336a.671.671,0,0,0-.658.528,1.3,1.3,0,0,1-.259.564.979.979,0,0,1-.834.305,1,1,0,0,1-.834-.305,1.3,1.3,0,0,1-.259-.564.671.671,0,0,0-.658-.528h0a.675.675,0,0,0-.658.823,2.313,2.313,0,0,0,2.408,1.921,2.309,2.309,0,0,0,2.408-1.921.678.678,0,0,0-.658-.823Z"
+                        transform="translate(-9.139 -11.08)" />
+                    <path class="a"
+                        d="M22.574,18.625c-.771-1.007-2.287-1.6-2.287-6.105,0-4.627-2.062-6.487-3.984-6.933-.18-.045-.31-.1-.31-.293V5.151a1.222,1.222,0,0,0-1.2-1.22h-.03a1.222,1.222,0,0,0-1.2,1.22v.144c0,.184-.13.248-.31.293-1.927.451-3.984,2.306-3.984,6.933,0,4.508-1.517,5.093-2.287,6.105a.984.984,0,0,0,.8,1.577h14.02A.984.984,0,0,0,22.574,18.625Zm-1.952.288H8.95a.217.217,0,0,1-.165-.362,6,6,0,0,0,1.051-1.656,11.147,11.147,0,0,0,.716-4.374,7.551,7.551,0,0,1,1.046-4.3,3.212,3.212,0,0,1,1.937-1.369,1.758,1.758,0,0,0,.931-.521.4.4,0,0,1,.6-.01A1.818,1.818,0,0,0,16,6.847a3.212,3.212,0,0,1,1.937,1.369,7.551,7.551,0,0,1,1.046,4.3,11.147,11.147,0,0,0,.716,4.374,6.071,6.071,0,0,0,1.076,1.681A.2.2,0,0,1,20.622,18.913Z"
+                        transform="translate(-6.775 -3.93)" />
+                </svg>
+            </div>
+            <div class="avatar-action pl-10">
+                <div class="profile-picture">
+                    <img src="../assets/media/profile.svg" />
+                </div>
+                <div class="pl-10">
+                    <span>Adam Zampa</span>
+                    <span>
+                        <img src="../assets/media/down-arrow.svg" />
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dashboard-container new-submission-container">
+        <section>
+            <div class="new-submission-title">
+                <div class="new-submission-welcome-title">
+                    New People Contact
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="contact-form-container">
+                <h3>Contact Details</h3>
+
+                <div class="contact-form">
+                    <form>
+                        <div class="form-control">
+                            <label class="custom-file-upload">
+                                <input type="file" accept="image/*" id="image-upload" onchange="loadFile(event)">
+                                <img id="output" class="custom-file-upload" src="" />
+                                <p id="browse" class="browse-image">BROWSE IMAGE</p>
+                            </label>
+                            <span class="cross-button" onclick="removeImage()"><img
+                                    src="../assets/media/Icon material-close.svg" /></span>
+                        </div>
+                        <div class="form-control">
+                            <label for="contact-name" style="display: none">Name</label>
+                            <br />
+                            <input type="text" placeholder="Name" name="contact-name" id="contact-name"
+                                onclick="displayTitle(this)" />
+                        </div>
+                        <div class="form-control">
+                            <label for="contact-company" style="display: none">Company</label>
+                            <br />
+                            <input type="text" placeholder="Company" name="contact-company" id="contact-company"
+                                onclick="displayTitle(this)" />
+                        </div>
+                        <div class="form-control">
+                            <label for="contact-title" style="display: none">Title</label>
+                            <br />
+                            <input type="text" placeholder="Title" name="contact-title" id="contact-title"
+                                onclick="displayTitle(this)" />
+                        </div>
+                        <div class="form-control">
+                            <label for="contact-aka" style="display: none">AKA</label>
+                            <br />
+                            <input type="text" placeholder="AKA" name="contact-aka" id="contact-aka"
+                                onclick="displayTitle(this)" />
+                        </div>
+                        <div class="form-control contact-input" id="email-input-form">
+                            <div style="width: 67%;">
+                                <label for="email" style="display: none">Email (Business)</label>
+                                <br />
+                                <input type="email" placeholder="Email (Business)" name="email" id="email"
+                                    onclick="displayTitle(this)" />
+                            </div>
+                            <div class="add-contact-switch hidden">
+                                <label class="switch-label is-primary-email">Is Primary</label>
+                                <label class="switch">
+                                    <input type="checkbox" class="primaryEmail" id="is-primary-email" />
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-control add-field">
+                            <div></div>
+                            <div>
+                                <p class="add-email" onclick="addMoreEmail(this)">Add Email</p>
+                            </div>
+                        </div>
+                        <div class="form-control contact-input" id="personal-email-form">
+                            <div style="width: 67%;">
+                                <label for="email" style="display: none">Email (Personal)</label>
+                                <br />
+                                <input type="email" placeholder="Email (Personal)" name="email" id="email"
+                                    onclick="displayTitle(this)" />
+                            </div>
+                            <div class="add-contact-switch hidden">
+                                <label class="switch-label is-primary-email">Is Primary</label>
+                                <label class="switch">
+                                    <input type="checkbox" class="personalEmail" id="is-primary-email" />
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-control add-field">
+                            <div></div>
+                            <div>
+                                <p class="add-email" onclick="addMorePersonalsEmail(this)">Add Email</p>
+                            </div>
+                        </div>
+                        <div class="form-control contact-input" id="phone-input-form">
+                            <div style="width: 67%;">
+                                <label for="phone" style="display: none">Phone</label>
+                                <br />
+                                <input type="phone" placeholder="Phone" name="phone" id="phone"
+                                    onclick="displayTitle(this)" />
+                            </div>
+                            <div class="add-contact-switch hidden">
+                                <label class="switch-label is-primary-phone">Is Primary</label>
+                                <label class="switch">
+                                    <input type="checkbox" class="primaryPhone" id="is-primary-phone" />
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-control add-field">
+                            <div></div>
+                            <div>
+                                <p class="add-phone" onclick="addMorePhone(this)">Add Phone</p>
+                            </div>
+                        </div>
+                        <div class="form-control">
+                            <label for="assistant-name" style="display: none">Assitant Name</label>
+                            <br />
+                            <input type="text" placeholder="Assitant Name" name="assistant-name" id="assistant-name"
+                                onclick="displayTitle(this)" />
+                        </div>
+                        <div class="form-control contact-input" id="assitant-email-form">
+                            <div style="width: 67%;">
+                                <label for="assistant-email" style="display: none">Assitants Email</label>
+                                <br />
+                                <input type="email" placeholder="Assitants Email" name="assistant-email"
+                                    id="assistant-email" onclick="displayTitle(this)" />
+                            </div>
+                            <div class="add-contact-switch hidden">
+                                <label class="switch-label is-primary-email">Is Primary</label>
+                                <label class="switch">
+                                    <input type="checkbox" class="assistantEmail" id="is-primary-email" />
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-control add-field">
+                            <div></div>
+                            <div>
+                                <p class="add-email" onclick="addMoreAssistantEmail(this)">Add Email</p>
+                            </div>
+                        </div>
+                        <div class="form-control contact-input" id="assitants-phone">
+                            <div style="width: 67%;">
+                                <label for="assistant-phone" style="display: none">Assitants Phone</label>
+                                <br />
+                                <input type="phone" placeholder="Assitants Phone" name="assistant-phone"
+                                    id="assistant-phone" onclick="displayTitle(this)" />
+                            </div>
+                            <div class="add-contact-switch hidden">
+                                <label class="switch-label is-primary-phone">Is Primary</label>
+                                <label class="switch">
+                                    <input type="checkbox" class="assistantPhone" id="is-primary-phone" />
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-control add-field">
+                            <div></div>
+                            <div>
+                                <p class="add-phone" onclick="addAssistantPhone(this)">Add Phone</p>
+                            </div>
+                        </div>
+                        <div class="form-control">
+                            <label for="credits" style="display: none">Credits</label>
+                            <br />
+                            <textarea name="credits" id="credits" onclick="displayTitle(this)" placeholder="Credits"
+                                class="text_area_input" rows="5"></textarea>
+                        </div>
+                        <div class="autocomplete">
+                            <label for="related-contacts" style="display: none">Related Contacts</label>
+                            <br />
+                            <input type="text" placeholder="Related Contacts" name="related-contacts"
+                                id="related-contacts" class="ac" onclick="displayTitle(this, true)" />
+                        </div>
+                        <div class="form-control radio-control">
+                            <div>Overall Deal?</div>
+                            <div id="toggleSwitch">
+                                <label class="switch">
+                                    <input type="checkbox" id="overall-deal" />
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-control">
+                            <label for="lookup-deals" style="display: none">Lookup Deals</label>
+                            <br />
+                            <input type="text" placeholder="Lookup Deals" name="lookup-deals" disabled
+                                id="lookup-deals" />
+                        </div>
+                        <div class="form-control file-upload">
+                            <div>Add Attachments</div>
+                            <div>
+                                <input type="file" id="file" />
+                                <label for="file">BROWSE FILES</label>
+                            </div>
+                        </div>
+                        <div class="form-control form-btn-row">
+                            <a href="../people/people.html">
+                                <button class="form-submit-btn" type="submit">
+                                    SAVE</button></a>
+                            <a href="../people/people.html">
+                                <button class="form-cancel-btn">CANCEL</button></a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function redirectToPeopleMgmt() {
+            console.log("Hello");
+            window.location.href = "people.html";
+        }
+        document.getElementById("overall-deal").onchange = function () {
+            document.getElementById("lookup-deals").disabled = !this.checked;
+        };
+
+        var loadFile = function (event) {
+            var output = document.getElementById('output');
+            document.getElementById("browse").style.display = "none";
+            output.src = URL.createObjectURL(event.target.files[0]);
+            output.onload = function () {
+                URL.revokeObjectURL(output.src) // to free memory
+            }
+            if (document.getElementById("output").src != "") {
+                document.getElementsByClassName('cross-button')[0].style.display = 'inline';
+            }
+        };
+
+        function removeImage(event) {
+            document.querySelector('.cross-button').addEventListener('click', function (e) {
+                e.stopPropagation();
+            });
+            var fileInput = document.getElementById("image-upload");
+            var output = document.getElementById("output").src = "";
+            document.getElementsByClassName('cross-button')[0].style.display = 'none';
+            document.getElementById("browse").style.display = "block";
+            fileInput.value = "";
+        }
+
+
+        function addMoreEmail(el) {
+            var itm = document.getElementById("email-input-form");
+            itm.querySelector('.add-contact-switch').classList.remove('hidden');
+            var cln = itm.cloneNode(true);
+            var newTableID = Date.now();
+            cln.id = newTableID;
+            document.getElementById("email-input-form").insertAdjacentElement("afterend", cln);
+            document.querySelectorAll('.primaryEmail').forEach(element => element.addEventListener('click', disableOtherEmail))
+        }
+
+        function disableOtherEmail(event) {
+            if (event.target.checked) {
+                document.querySelectorAll('.primaryEmail').forEach(element => element.checked = false)
+                document.querySelectorAll('.primaryEmail').forEach(element => element.parentElement.previousElementSibling.classList.remove('txt-black'));
+                event.target.parentElement.previousElementSibling.classList.add('txt-black');
+                event.target.checked = true;
+            } else {
+                document.querySelectorAll('.primaryEmail').forEach(element => element.checked = false)
+            }
+        }
+
+        function addMorePersonalsEmail(el) {
+            var itm = document.getElementById("personal-email-form");
+            itm.querySelector('.add-contact-switch').classList.remove('hidden');
+            var cln = itm.cloneNode(true);
+            var newTableID = Date.now();
+            cln.id = newTableID;
+            document.getElementById("personal-email-form").insertAdjacentElement("afterend", cln);
+            document.querySelectorAll('.personalEmail').forEach(element => element.addEventListener('click', disableOtherPersonalEmail))
+        }
+
+        function disableOtherPersonalEmail(event) {
+            if (event.target.checked) {
+                document.querySelectorAll('.personalEmail').forEach(element => element.checked = false)
+                document.querySelectorAll('.personalEmail').forEach(element => element.parentElement.previousElementSibling.classList.remove('txt-black'));
+                event.target.parentElement.previousElementSibling.classList.add('txt-black');
+                event.target.checked = true;
+            } else {
+                document.querySelectorAll('.personalEmail').forEach(element => element.checked = false)
+            }
+        }
+
+        function addMorePhone(el) {
+            var itm = document.getElementById("phone-input-form");
+            itm.querySelector('.add-contact-switch').classList.remove('hidden');
+            var cln = itm.cloneNode(true);
+            var newTableID = Date.now();
+            cln.id = newTableID;
+            document.getElementById("phone-input-form").insertAdjacentElement("afterend", cln);
+            document.querySelectorAll('.primaryPhone').forEach(element => element.addEventListener('click', disableOtherPhone))
+
+        }
+
+        function disableOtherPhone(event) {
+            if (event.target.checked) {
+                document.querySelectorAll('.primaryPhone').forEach(element => element.checked = false)
+                document.querySelectorAll('.primaryPhone').forEach(element => element.parentElement.previousElementSibling.classList.remove('txt-black'));
+                event.target.parentElement.previousElementSibling.classList.add('txt-black');
+                event.target.checked = true;
+            } else {
+                document.querySelectorAll('.primaryPhone').forEach(element => element.checked = false)
+            }
+        }
+
+        function addMoreAssistantEmail(el) {
+            var itm = document.getElementById("assitant-email-form");
+            itm.querySelector('.add-contact-switch').classList.remove('hidden');
+            var cln = itm.cloneNode(true);
+            var newTableID = Date.now();
+            cln.id = newTableID;
+            document.getElementById("assitant-email-form").insertAdjacentElement("afterend", cln);            
+            document.querySelectorAll('.assistantEmail').forEach(element => element.addEventListener('click', disableAssitantsEmail))
+
+        }
+
+        function disableAssitantsEmail(event) {
+            if (event.target.checked) {
+                document.querySelectorAll('.assistantEmail').forEach(element => element.checked = false)
+                document.querySelectorAll('.assistantEmail').forEach(element => element.parentElement.previousElementSibling.classList.remove('txt-black'));
+                event.target.parentElement.previousElementSibling.classList.add('txt-black');
+                event.target.checked = true;
+            } else {
+                document.querySelectorAll('.assistantEmail').forEach(element => element.checked = false)
+            }
+        }
+
+        function addAssistantPhone(el) {
+            var itm = document.getElementById("assitants-phone");
+            itm.querySelector('.add-contact-switch').classList.remove('hidden');
+            var cln = itm.cloneNode(true);
+            var newTableID = Date.now();
+            cln.id = newTableID;
+            document.getElementById("assitants-phone").insertAdjacentElement("afterend", cln);
+            document.querySelectorAll('.assistantPhone').forEach(element => element.addEventListener('click', disableAssitantsPhone))
+
+        }
+
+        function disableAssitantsPhone(event) {
+            if (event.target.checked) {
+                document.querySelectorAll('.assistantPhone').forEach(element => element.checked = false)
+                document.querySelectorAll('.assistantPhone').forEach(element => element.parentElement.previousElementSibling.classList.remove('txt-black'));
+                event.target.parentElement.previousElementSibling.classList.add('txt-black');
+                event.target.checked = true;
+            } else {
+                document.querySelectorAll('.assistantPhone').forEach(element => element.checked = false)
+            }
+        }
+
+
+        function displayTitle(e, isAutocomplete = false) {
+            const elm = e.labels[0];
+            if (!isAutocomplete) {
+                elm.classList.add("form-control-label");
+            } else {
+                elm.classList.add("form-control-ac-label");
+            }
+        }
+
+        var textarea = document.querySelectorAll("textarea");
+        var index = 0;
+        for (; index < textarea.length; index++) {
+            textarea[index].addEventListener("keydown", autosize);
+        }
+
+
+
+        function add() {
+
+            var a = document.getElementById("demo");
+            //Create an input type dynamically.
+            var element = document.createElement("input");
+
+            //Assign different attributes to the element.
+            element.setAttribute("type", "text");
+            element.setAttribute("value", "");
+            element.setAttribute("name", "demo");
+            element.setAttribute("placeholder", "Email(Business)");
+            element.setAttribute("style", "margin-top:20px");
+
+            //Append the element in page (in span).
+            a.appendChild(element);
+        }
+
+
+        function autosize() {
+            var el = this;
+            setTimeout(function () {
+                el.style.cssText = "height:auto; padding:0";
+                el.style.cssText = "height:" + el.scrollHeight + "px";
+            }, 0);
+        }
+
+        /* If the user clicks anywhere outside the select box,
+        then close all select boxes: */
+        //document.addEventListener("click", closeAllSelect);
+
+        const selected = {};
+
+        const getUsers = async () => {
+            const result = await fetch("https://jsonplaceholder.typicode.com/users")
+                .then((response) => response.json())
+                .then((json) => json);
+            const data = result.map((user) => user.name);
+
+            // add autocomplete to desired inputs
+            autocomplete(document.getElementById("related-contacts"), data);
+            
+
+            // setting default value for an input elm
+            await setDefaultVal(document.getElementById("related-contacts"), data[0]).then(
+                (res) => {
+                    const node = document.getElementById("related-contacts").nextElementSibling;
+                    createDefaultChip(node);
+                }
+            );
+        };
+
+        // to set a default GET value for specified input elm
+        async function setDefaultVal(elm, val) {
+            elm.value = val;
+            let event = new Event("input", {
+                bubbles: true,
+                cancelable: true,
+            });
+
+            await elm.dispatchEvent(event);
+        }
+
+        // to create chip for deafult GET value
+        async function createDefaultChip(node) {
+            const toClick = node.querySelector("input");
+            let event = new Event("click", {
+                bubbles: true,
+                cancelable: true,
+            });
+            await toClick.dispatchEvent(event);
+        }
+
+        // dummy array for autocomplete
+        const users = getUsers();
+
+        // function to add a selected value into "selected" object
+        function addToSelected(elm, inputElm) {
+            console.log(elm, inputElm);
+            const selectedID = inputElm.parentNode.parentNode
+                .getElementsByTagName("input")[0]
+                .name.split("-")[0];
+            if (!selected[selectedID]) {
+                selected[selectedID] = [];
+            }
+
+            const hasAlready = selected[selectedID].indexOf(elm);
+
+            if (hasAlready !== -1) {
+                return;
+            }
+            selected[selectedID].push(elm);
+            const node = document.createElement("DIV");
+            node.setAttribute("class", "chip-span");
+            const imageNode = document.createElement("img");
+            imageNode.setAttribute("src", "../assets/media/profile.svg");
+            imageNode.setAttribute("class", "chip-image");
+            const textNode = document.createElement("SPAN");
+            textNode.innerText = elm;
+            textNode.setAttribute("class", "chip-text");
+            const crossSpan = document.createElement("BUTTON");
+            crossSpan.setAttribute("class", "cross-span");
+            //crossSpan.innerText = "x";
+
+            // function to remove value from selected object
+            crossSpan.addEventListener("click", function (e) {
+                const toRemove = e.target.parentNode.firstChild;
+                const newArr = selected[selectedID].filter(function (val) {
+                    return val === toRemove;
+                });
+                e.target.parentNode.parentNode.removeChild(
+                    e.target.parentNode
+                );
+                selected[selectedID] = newArr;
+            });
+            //imageNode.insertAdjacentElement("beforeend", textNode);
+            //textNode.insertAdjacentElement("beforeend", crossSpan);
+
+            node.appendChild(imageNode);
+            node.appendChild(textNode);
+            node.appendChild(crossSpan);
+            //node.appendChild(crossSpan);
+            inputElm.parentNode.parentNode.prepend(node);
+        }
+
+        // autocomplete watcher function
+        function autocomplete(inp, arr) {
+            /*the autocomplete function takes two arguments,
+          the text field element and an array of possible autocompleted values:*/
+            var currentFocus;
+            // addToSelected(arr[0], inp);
+            /*execute a function when someone writes in the text field:*/
+            inp.addEventListener("input", function (e) {
+                var a,
+                    b,
+                    i,
+                    val = this.value;
+                /*close any already open lists of autocompleted values*/
+                closeAllLists();
+                if (!val) {
+                    return false;
+                }
+                currentFocus = -1;
+                /*create a DIV element that will contain the items (values):*/
+                a = document.createElement("DIV");
+                a.setAttribute("id", this.id + "autocomplete-list");
+                a.setAttribute("class", "autocomplete-items");
+                /*append the DIV element as a child of the autocomplete container:*/
+                this.parentNode.appendChild(a);
+                /*for each item in the array...*/
+                for (i = 0; i < arr.length; i++) {
+                    /*check if the item starts with the same letters as the text field value:*/
+                    if (
+                        arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()
+                    ) {
+                        /*create a DIV element for each matching element:*/
+                        b = document.createElement("DIV");
+                        /*make the matching letters bold:*/
+                        b.innerHTML =
+                            "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                        b.innerHTML += arr[i].substr(val.length);
+                        /*insert a input field that will hold the current array item's value:*/
+                        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                        /*execute a function when someone clicks on the item value (DIV element):*/
+                        b.addEventListener("click", function (e) {
+                            /*insert the value for the autocomplete text field:*/
+                            inp.value = this.getElementsByTagName("input")[0].value;
+                            // selected.push(inp.value);
+                            console.log(inp);
+                            addToSelected(inp.value, this);
+                            inp.value = "";
+                            /*close the list of autocompleted values,
+                          (or any other open lists of autocompleted values:*/
+                            closeAllLists();
+                        });
+                        a.appendChild(b);
+                    }
+                }
+            });
+            /*execute a function presses a key on the keyboard:*/
+            inp.addEventListener("keydown", function (e) {
+                var x = document.getElementById(this.id + "autocomplete-list");
+                if (x) x = x.getElementsByTagName("div");
+                if (e.keyCode == 40) {
+                    /*If the arrow DOWN key is pressed,
+                  increase the currentFocus variable:*/
+                    currentFocus++;
+                    /*and and make the current item more visible:*/
+                    addActive(x);
+                } else if (e.keyCode == 38) {
+                    //up
+                    /*If the arrow UP key is pressed,
+                  decrease the currentFocus variable:*/
+                    currentFocus--;
+                    /*and and make the current item more visible:*/
+                    addActive(x);
+                } else if (e.keyCode == 13) {
+                    /*If the ENTER key is pressed, prevent the form from being submitted,*/
+                    e.preventDefault();
+                    if (currentFocus > -1) {
+                        /*and simulate a click on the "active" item:*/
+                        if (x) x[currentFocus].click();
+                    }
+                }
+            });
+            function addActive(x) {
+                /*a function to classify an item as "active":*/
+                if (!x) return false;
+                /*start by removing the "active" class on all items:*/
+                removeActive(x);
+                if (currentFocus >= x.length) currentFocus = 0;
+                if (currentFocus < 0) currentFocus = x.length - 1;
+                /*add class "autocomplete-active":*/
+                x[currentFocus].classList.add("autocomplete-active");
+            }
+            function removeActive(x) {
+                /*a function to remove the "active" class from all autocomplete items:*/
+                for (var i = 0; i < x.length; i++) {
+                    x[i].classList.remove("autocomplete-active");
+                }
+            }
+            function closeAllLists(elmnt) {
+                /*close all autocomplete lists in the document,
+              except the one passed as an argument:*/
+                var x = document.getElementsByClassName("autocomplete-items");
+                for (var i = 0; i < x.length; i++) {
+                    if (elmnt != x[i] && elmnt != inp) {
+                        x[i].parentNode.removeChild(x[i]);
+                    }
+                }
+            }
+            /*execute a function when someone clicks in the document:*/
+            document.addEventListener("click", function (e) {
+                closeAllLists(e.target);
+            });
+        }
+    </script>
+</body>
+
+</html>

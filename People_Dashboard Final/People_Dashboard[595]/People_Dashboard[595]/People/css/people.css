@@ -1,0 +1,680 @@
+@import url("./main.css");
+
+body {
+  margin: 0px;
+}
+
+.people-welcome-title {
+  font-size: 60px;
+  font-family: "Poppins Light";
+  margin-bottom: 10px;
+}
+
+.people-container {
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.people-section {
+  padding-top: 10px;
+}
+
+.people-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.people-cards .people-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff;
+  /* flex-grow: 1; */
+  width: calc(32% - 40px);
+  height: 150px;
+}
+
+.people-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.people-title a {
+  padding: 10px;
+  background: #d4ae36;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  color: #000;
+}
+
+@media screen and (max-width: 600px) {
+  .people-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .people-title a {
+    width: 100% !important  ;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .people-title {
+    flex-direction: column;
+  }
+
+  .people-welcome-title {
+    font-size: 28px;
+  }
+
+  .people-container {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .people-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .people-cards .people-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* flex-grow: 1; */
+    width: calc(100% - 40px);
+    margin-top: 10px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .people-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1200px) {
+  .people-title {
+    flex-direction: row;
+  }
+
+  .people-welcome-title {
+    font-size: 40px;
+  }
+
+  .people-container {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .people-cards {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .people-cards .people-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* flex-grow: 1; */
+    width: calc(49% - 40px);
+    height: 150px;
+  }
+
+  .people-cards .people-card:last-child {
+    margin-top: 20px;
+    justify-content: center;
+    width: calc(100% - 40px);
+    height: 150px;
+    text-align: center;
+  }
+
+  .people-cards .people-card:last-child .card-stat {
+    padding-right: 20px;
+  }
+}
+
+.people-card {
+  background: #fff;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.people-card .card-title {
+  font-family: "Poppins SemiBold";
+  font-size: 20px;
+}
+
+.people-card .card-stat {
+  font-family: "Poppins SemiBold";
+  color: var(--theme-yellow);
+  font-size: 60px;
+}
+
+.table-container {
+  background-color: #fff;
+  padding: 2%;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+  /* overflow-x: scroll; */
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.table-container tr:nth-child(odd):not(:first-child) {
+  background-color: #eeeeee;
+}
+
+.table-container tr:hover:not(:first-child) {
+  background-color: var(--theme-yellow);
+  cursor: pointer;
+}
+
+.submission-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.submission-table th,
+.submission-table td {
+  border: 1px solid #ddd;
+  border-right: none;
+  border-left: none;
+  padding: 8px;
+}
+
+.submission-table th {
+  font-family: "Poppins SemiBold";
+  font-size: 14px;
+}
+
+.submission-table td {
+  font-size: 13px;
+}
+
+.submission-table th:last-child,
+.submission-table td:last-child {
+  border-right: 1px solid #ddd;
+}
+
+.submission-table th:first-child,
+.submission-table td:first-child {
+  border-left: 1px solid #ddd;
+}
+
+.status-pass div,
+.status-weak div,
+.status-na div,
+.status-consider div {
+  padding: 5px;
+  width: 100%;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 10px;
+  text-align: center;
+}
+
+.status-pass div {
+  background-color: var(--status-pass);
+}
+
+.status-na div {
+  background-color: var(--status-na);
+}
+
+.status-consider div {
+  background-color: var(--status-consider);
+}
+
+.status-weak div {
+  background-color: var(--status-weak);
+}
+
+.table-container .overall-txt {
+  color: var(--status-consider);
+  text-decoration: underline;
+  font-family: "Poppins Medium";
+}
+
+.table-container .needs-coverage-txt {
+  color: var(--status-na);
+}
+
+.table-container .convert-stage-txt {
+  color: var(--status-pass);
+}
+
+.table-container .pass-stage-txt {
+  color: var(--status-weak);
+}
+
+.table-options {
+  border: 1px solid #ddd;
+  padding: 5px;
+  font-size: 12px;
+  text-align: right;
+  position: sticky;
+  left: 0;
+}
+
+.table-options select {
+  padding: 2px;
+}
+
+.actionable-items {
+  background-color: #fff;
+  padding: 2%;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.actionable-items {
+  counter-reset: action-items;
+}
+
+.action-item {
+  min-height: 120px;
+  padding: 10px;
+  padding-left: 3%;
+}
+
+.actionable-items .action-item p::before {
+  counter-increment: action-items; /* Increment the value of section counter by 1 */
+  content: counter(action-items) ". ";
+}
+
+.action-item-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+  .action-item-description {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.action-item-description .details-btn {
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: max-content;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-family: "Poppins Regular";
+  height: 40px;
+  border: 1px solid #d3d3d3;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.action-item-description .details-btn-container {
+  padding-left: 30px;
+}
+
+.item-list-footer {
+  text-align: center;
+  text-decoration: underline;
+  color: #afafaf;
+  padding-top: 15px;
+}
+
+.action-items-card {
+  cursor: pointer;
+}
+
+.table-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.table-title:first-child {
+  font-size: large;
+  font-weight: bold;
+}
+
+.table-title input,
+.popup-search input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 250px;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .table-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .table-title div {
+    width: calc(100% - 20px);
+    padding-right: 20px;
+  }
+  .table-title input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: auto;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Add a background color to the top navigation */
+.topnav {
+  background-color: #83744e;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.profile-picture {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.picture-row {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+}
+
+.topnav,
+.nav-actions-container,
+.avatar-action,
+.menu-hamburger {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.notifications-action {
+  height: 20px;
+}
+
+.topnav {
+  justify-content: space-between;
+}
+
+.pr-10 {
+  padding-right: 10px;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.menu-hamburger div:first-child {
+  height: 20px;
+  cursor: pointer;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #3d3a3ac7; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 0px; /* Place content 60px from the top */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  /* right: 25px; */
+  font-size: 25px;
+  margin-left: 230px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 0px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.sidenav-logo {
+  border-bottom: 2px solid #484848;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sidenav-logo img {
+  height: 110px;
+}
+
+.sidenav-links {
+  margin-top: 5px;
+}
+
+.sidenav-link {
+  color: #fff;
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+.active-link {
+  background: #faf6e81c;
+  /* opacity: 0.2; */
+}
+
+.sidenav-sublink ul {
+  margin: 0px;
+}
+
+.sidenav-sublink li {
+  list-style: none;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.sidenav-body {
+  width: 300px;
+  height: 100%;
+  background-color: #3d3a3a;
+}
+
+.filter-icon {
+  vertical-align: middle;
+  height: 12px;
+  /* float: right;
+  padding-top: 4px; */
+  padding-left: 4px;
+  cursor: pointer;
+}
+
+.hide-popup {
+  visibility: hidden;
+}
+
+.popup-search input {
+  min-width: calc(100% - 20px);
+}
+
+.popup-search-input {
+  padding: 15px;
+  padding-top: 0px;
+  background: #fff;
+  box-shadow: 2px 2px 10px #27272757;
+}
+
+.popup-search-input .closebtn {
+  position: relative;
+  top: 0;
+  /* right: 25px; */
+  font-size: 25px;
+  float: right;
+}
+
+.popup-search-input a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.form-control-ac-label {
+  position: relative;
+  display: inline !important;
+  top: 22px;
+  font-size: 12px;
+  background: #fff;
+  left: 10px;
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+.pagination {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.pagination img {
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.table-title input:focus {
+  outline: none;
+  border: 2px solid #d4ae36;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px black;
+  text-decoration: underline;
+  text-align: left;
+  text-decoration: underline;
+  font: normal normal normal 14px/24px Poppins;
+  letter-spacing: 0px;
+  color: #83744e;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 88%;
+  left: 69%;
+  /* margin-left: 34px; */
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  text-align: left;
+  border-bottom-left-radius: 0px;
+}
+
+.tooltip:hover .tooltiptext {
+  padding: 5px 12px;
+  font-size: 14px;
+  font-family: Poppins Regular;
+  color: #ffffff;
+  visibility: visible;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 12%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+.iconPlus {
+  position: relative;
+  top: 4px;
+}
+.people-title a:hover {
+  background-color: #e3c460;
+}
+.rowHrStyle {
+  width: 1px;
+  height: 20px;
+  display: inline;
+  margin-left: 22px;
+  border: 1px solid #d3d3d3;
+  opacity: 1;
+}
+
+.table-container tr:hover:not(:first-child) {
+  background-color: #e3c460;
+  cursor: pointer;
+}
+.pagination-list {
+  margin-left: 10px;
+}
